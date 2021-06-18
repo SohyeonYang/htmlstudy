@@ -4,19 +4,442 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" .css">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+        .notice
+        {
+            visibility: hidden ;
+        }
+        }
+        .notice_background
+        {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            z-index: 1;
+            opacity: 0.2;
+        }
+
+        .notice_border
+        {
+            position: relative;
+            margin: 0 auto;
+            top: 22vh ;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
+        }
+
+        body
+        {
+            margin: 0px;
+        }
+        header
+        {
+            position: relative;
+            top: 0px;
+            width: 100%;
+            min-width: 1280px;
+            height: 5vh;
+            background-color: rgb(250, 198, 168);
+        }
+
+        .nav
+        {
+            position: relative;
+            top:0px;
+            width: 1280px;
+            min-width: 1280px;
+            margin: 0px auto;
+            min-height: 100%;
+            padding-left: 20px;
+        
+        }
+
+        .main{
+            position: relative;
+            top: 0px;
+            margin: 0px auto;
+            width: 100%;
+            min-width: 1280px;
+            min-height: 90vh;
+            background-color: rgb(248, 229, 207);
+        }
+
+        .header .nav .menu1
+        {
+            position: relative;
+            float: left;
+            width: 140px;
+            padding-top: 15px;
+            padding-right: 250px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 15pt;
+            display: flex;
+        }
+        .header .nav .menu2
+        {
+            position: relative;
+            float: left;
+            width: 140px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+        .header .nav .menu3
+        {
+            position: relative;
+            float: left;
+            width: 140px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+
+        .header .nav .menu3:hover
+        {
+            color:purple;
+            background-color: beige;
+
+        }
+        .header .nav .menu3:active
+        {
+            color: purple;
+            background-color: beige;
+        }
+        .header .nav .menu4{
+            position: relative;
+            float: left;
+            width: 140px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+        .header .nav .menu5{
+            position: relative;
+            float: left;
+            width: 140px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+
+        .main .section1
+        {
+            position: relative;
+            top: 0px;
+            margin: 0px auto;
+            width: 1280px;
+            height: 500px;
+            padding-top: 50px;
+        }
+
+        .main .section1 .img1
+        {
+            width: 100%;
+            height: 600px;
+        }
+
+        .main .section2
+        {
+            position: relative;
+            padding-top: 300px;
+            margin: 0px auto;
+            width: 1280px;
+            height: 300px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .main .section2 .text1
+        {
+            position: absolute;
+            top: 120px;
+            left: 90px;
+            font-family: 'Single Day', cursive;
+            font-size: 20pt;
+            font-weight: 700;
+            text-align: left;
+            width: 500px;
+            padding-top: 35px;
+        }
+
+        .main .section2 .img2
+        {
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-image: url("img/alvan-nee-eoqnr8ikwFE-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 35px;
+        }
+
+        .main .section2 .text2
+        {
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            width: 600px;
+            height: 300px;
+            font-family: 'Single Day', cursive;
+            font-size: 20pt;
+            font-weight: 700;
+            text-align: left;
+            width: 500px;
+        }
+
+        .main .section3
+        {
+            position: relative;
+            top: 0px;
+            margin: 0px auto;
+            width: 1280px;
+            height: 400px;
+            /* padding-top: 50px; */
+            font-family: 'Single Day', cursive;
+            font-size: 20pt;
+        }
+
+        .main .section4
+        {
+            position: relative;
+            top: 0px;
+            margin: 0px auto;
+            width: 1280px;
+            height: 400px;
+            padding-top: 50px;
+        }
+
+        @media all and (max-width: 1280px)
+        {
+            .header .nav .menu2
+            {
+                display: none;
+            }
+            .header .nav .menu3
+            {
+                display: none;
+            }
+            .header .nav .menu4
+            {
+                display: none;
+            }
+            .header .nav .menu5
+            {
+                display: none;
+            }
+        }
+
+        .footer
+        {
+            position: relative;
+            top: 0px;
+            width: 100%;
+            min-width: 1280px;
+            height: 25vh;
+            background-color: rgb(250, 198, 168);
+        }
+
+        .footer .footer_text1
+        {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            font-family: 'Single Day', cursive;
+            font-size: 20pt;
+            font-weight: 700;
+            text-align: left;
+            width: 500px;
+            padding-left: 50px;
+        }
+
+        .footer .footer_text2
+        {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            font-family: 'Single Day', cursive;
+            font-size: 15pt;
+            font-weight: 700;
+            text-align: left;
+            width: 500px;
+            padding-left: 70px;
+        }
+
+        .footer .footer_menu
+        {
+            position: relative;
+            top:150px;
+            width: 1280px;
+            min-width: 1280px;
+            height: 50px;
+            margin: 0px auto;
+            padding-left: 0px;
+            padding-top: 30px;
+        }
+
+        .footer .footer_menu .footer_menu1
+        {
+            position: relative;
+            float: left;
+            width: 200px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+
+        .footer .footer_menu .footer_menu2
+        {
+            position: relative;
+            float: left;
+            width: 200px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+        .footer .footer_menu .footer_menu3
+        {
+            position: relative;
+            float: left;
+            width: 200px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+        .footer .footer_menu .footer_menu4
+        {
+            position: relative;
+            float: left;
+            width: 200px;
+            padding-top: 15px;
+            cursor: pointer;
+            font-family: 'Single Day', cursive;
+            font-size: 13pt;
+            display: flex;
+        }
+        @media all and (min-width: 1280px)
+        {
+            
+        }
+
+        .main .section1 .img1:hover
+        {
+            transform: scale(1.17) rotate(1080deg);
+            transition: 0.5s;
+        }
+
+        @keyframes myanimation{
+            form{
+                margin-left: 0px;
+            }
+            to{
+                margin-left: 200px;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    qewrqwerqwqw
-    <h1>qe111wrqwmnjkjer</h1>
-    <img src="img/girl-5028253_1920.jpg" alt="">
-    qewrqwerqwqw
-    <br>
-    qewrqwerqwqw
-    <br>
-    <h1>qe111wrqwmnjkjer</h1>
+    <header class="header">
+        <nav class="nav">
+            <div class="menu1">ㅇㅇㅇ 애견 미용실</div>
+            <a href="index.html" style="color: black;">
+            <div class="menu2">메인 페이지</div></a>
+            <div class="menu3">회사 역사</div>
+            <div class="menu4">예약현황</div>
+            <div class="menu5">Q&A</div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="notice">
+            <div class="notice_background"></div>
+            <div style="position: absolute;">
+                <div class="notice_border">공지사항</div></div>
+        </section>
+        <section class="section1"><img src="img/크기변환1_1포맷변환_DSC_0117-6.jpg" class="img1" alt=""></section>
+        <section class="section2">
+            <div class="text1"><b>ㅇㅇㅇ 강아지 키우고싶다...</b></div>
+            <div class="img2"></div>
+            <div class="text2">
+                <div style="font-size: 26pt;font-weight: 700;">강아지 쉽게 미용시키세요!</div>
+                <p style="font-size: 17pt;"> 우리집 강아지 너무 미용시키기 힘드시죠?</p>
+                <p style="font-size: 17pt;">올해의 강아지 미용대회 1등에 선발되어 기쁩니다!</br>강아지 미용을 맡겨주셔서 감사합니다.</p>
+                <p style="font-size: 17pt;"> 요를레히이이이잉</p>
+            </div>
+        </section>
+        <section class="section3">
+            <form action="index2.html">
+                <p><strong>예약 신청 양식</strong></p>
+                <p>
+                    <strong>이름</strong>
+                    <input type="text" name="name" placeholder="이름 입력">
+                </p>
+                <p>
+                    <strong>전화번호</strong>
+                    <input type="text" name="phonenumber" placeholder="전화번호 입력">
+                </p>
+                <p>
+                    <strong>애견 성별</strong>
+                    <input type="radio" name="gender" value="M">남자
+                    <input type="radio" name="gender" value="F">여자
+                </p>
+                <p>
+                    <strong>애견종</strong>
+                    <select>
+                    <option value="Pomeranian">포메라니안</option>
+                    <option value="husky">허스키</option>
+                    <option value="bulldog">불도그</option>
+                    <option value="ShihTzu">시츄</option>
+                    <option value="maltese">말티즈</option>
+                    <option value="Yorkshireterrier">요크셔테리어</option>
+                    <option value="Retriever">리트리버</option>
+                    <option value="Retriever">그 외</option>
+                </select>
+                </p>
+                <p>
+                    <input type="submit" value="예약 신청하기">
+                </p>
+            </form>
 
-    <div>DIV태그는 영역을 잡을 때 사용한다.<span>span영역</span></div>
-    <input:type></input:type>
+        </section>
+        <section></section>
+    </main>
+    <footer class="footer">
+        <section class="footer_text1">ㅇㅇㅇ 애견 미용실
+            <div class="footer_text2">대표 : ㅇㅇㅇ</br>대표번호 : 010-0000-0000</br>주소 : 서울특별시 강남구</div>
+        </section>
+        <section class="footer_menu">
+                <div class="footer_menu1">공지사항</div>
+                <div class="footer_menu2">이용약관</div>
+                <div class="footer_menu3">문의하기</div>
+                <div class="footer_menu4">Notice</div>
+        </section>
+    </footer>
 </body>
 </html>
